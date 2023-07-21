@@ -1,0 +1,188 @@
+body {
+    margin-top: 50px;
+    margin-left: 70px;
+}
+
+.robo {
+    width: 300px;
+    height: 400px;
+}
+
+.robo .face {
+    width: 170px;
+    height: 125px;
+    border-radius: 98px 98px 9px 9px;
+    background-color: rgb(100, 184, 3);
+    position: absolute;
+    left: 141px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    animation-name: face;
+}
+
+.face .eyes {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    margin-top: 30px;
+    column-gap: 3rem;
+    animation-name: eyes;
+}
+
+.mid {
+    height: 185px;
+    width: 170px;
+    background-color: rgb(100, 184, 3);
+    border-radius: 1px 1px 50px 50px;
+    position: relative;
+    left: 72px;
+    top: 132px;
+    animation-name: mid;
+}
+
+.hand1 {
+    height: 87px;
+    width: 28px;
+    border-radius: 20px;
+    background-color: rgb(100, 184, 3);
+    margin-top: -30px;
+    margin-left: 35px;
+    animation-name: hand1;
+}
+
+.hand2 {
+    height: 87px;
+    width: 28px;
+    border-radius: 20px;
+    background-color: rgb(100, 184, 3);
+    margin-top: -87px;
+    margin-left: 250px;
+    animation-name: hand2;
+}
+
+.down {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+}
+
+.down .legs1 {
+    height: 75px;
+    width: 33px;
+    border-radius: 20px;
+    background-color: rgb(100, 184, 3);
+    margin-top: 87px;
+    margin-left: 31px;
+    top: -30px;
+    left: 77px;
+    position: relative;
+    animation-name: legs1;
+}
+.down .legs2 {
+    height: 75px;
+    width: 33px;
+    border-radius: 20px;
+    background-color: rgb(100, 184, 3);
+    margin-top: 87px;
+    margin-left: 31px;
+    top: -30px;
+    left: 77px;
+    position: relative;
+    animation-name: legs2;
+}
+
+.robo:hover .hand1 {
+    animation: hand1 500ms infinite;
+}
+@keyframes hand1 {
+        0%{
+            transform: rotate(0deg);
+        }
+
+        100%{
+            transform: rotate(90deg);
+        }
+}
+
+.robo:hover .hand2 {
+    animation: hand2 500ms infinite;
+}
+@keyframes hand2 {
+        0%{
+            transform: rotate(0deg);
+        }
+
+        100%{
+            transform: rotate(-90deg);
+        }
+}
+
+.robo:hover .legs1{
+    animation: legs1 500ms infinite;
+}
+@keyframes legs1 {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(20deg);
+    }
+    100%{
+        transform: rotate(-20deg);
+    }
+}
+
+.robo:hover .legs2{
+    animation: legs2 500ms infinite;
+}
+@keyframes legs2 {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-20deg);
+    }
+    100%{
+        transform: rotate(20deg);
+    }
+}
+
+.robo:hover .mid{
+    animation: mid 500ms infinite;
+}
+@keyframes mid {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: translateX(30px);
+    }
+}
+
+.robo:hover .face{
+    animation: face 500ms infinite;
+}
+@keyframes face {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+       
+        transform: translateY(-15px);
+    }
+}
+
+.robo:hover .face .eyes{
+    animation: eyes 500ms infinite;
+}
+@keyframes eyes {
+    0%{
+        transform: scale(1.2);
+    }
+    100%{
+       transform: scale(1.5);
+    }
+}
